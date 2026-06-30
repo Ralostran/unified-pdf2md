@@ -1,0 +1,33 @@
+{
+  "name": "unified-pdf2md-monorepo",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Monorepo that unifies OpenGovSG pdf2md conversion with academic-paper review workflows inspired by eiaserinnys/pdf2md.",
+  "license": "MIT",
+  "workspaces": [
+    "packages/*",
+    "apps/*"
+  ],
+  "bin": {
+    "unified-pdf2md": "apps/cli/bin/unified-pdf2md.js"
+  },
+  "scripts": {
+    "test": "node --test tests/*.test.js",
+    "smoke": "node tests/smoke-convert.js",
+    "lint": "node --check apps/cli/bin/unified-pdf2md.js && node --check packages/pdf-core/src/index.js && node --check packages/review-engine/src/index.js && node --check packages/document-model/src/index.js",
+    "check": "npm run lint && npm test",
+    "convert": "node apps/cli/bin/unified-pdf2md.js convert",
+    "review": "node apps/cli/bin/unified-pdf2md.js review",
+    "export": "node apps/cli/bin/unified-pdf2md.js export",
+    "gui": "python apps/gui-python/unified_pdf2md_gui.py",
+    "gui:py3": "python3 apps/gui-python/unified_pdf2md_gui.py",
+    "lint:gui": "python -m py_compile apps/gui-python/unified_pdf2md_gui.py",
+    "lint:gui:py3": "python3 -m py_compile apps/gui-python/unified_pdf2md_gui.py"
+  },
+  "dependencies": {
+    "@opendocsg/pdf2md": "^0.2.7"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
