@@ -1,0 +1,13 @@
+{
+  "name": "unified-pdf2md",
+  "version": "0.1.0",
+  "bin": {
+    "unified-pdf2md": "bin/unified-pdf2md.js"
+  },
+  "main": "src/index.js",
+  "license": "MIT",
+  "dependencies": {
+    "@unified-pdf2md/pdf-core": "file:../../packages/pdf-core",
+    "@unified-pdf2md/review-engine": "file:../../packages/review-engine"
+  }
+}

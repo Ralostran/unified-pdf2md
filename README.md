@@ -87,4 +87,3 @@ Temporary/adapted in this phase:
 - The full OpenGovSG source is not vendored; the package dependency is used to reduce merge risk.
 - The eiaserinnys Tkinter UI is not ported; it is retained as a legacy integration target via shared JSON.
 - Translation is provider-agnostic through `UNIFIED_PDF2MD_TRANSLATE_COMMAND`.
-
